@@ -1,0 +1,62 @@
+use('mongo_1'); // db === mongo_1
+
+// <$lt <=$lte >$gt >=$gte ===$eq !==$ne
+
+// db.games.find();
+// find games that aren't for children
+// db.games.find({ isChildren: false });
+// find games with genre RPG
+// db.games.find({genre: 'RPG'});
+// find games that were released in 2020
+// db.games.find({ release: 2020 });
+// search by 2 parameters
+// db.games.find({ genre: 'RPG', release: 2020 });
+// db.games.find({ genre: 'souls', release: 2015 });
+// db.games.find({
+//     $and: [{genre: 'RPG'}, {release: 2020}]
+// });
+// db.games.find({
+//     $or: [{genre: 'RPG'}, {release: 2020}, {release: 2015}]
+// });
+// db.games.find({title: 'Minecraft'});
+// db.games.findOne();
+// db.gamers.find({
+//     $or: [{favouriteGame: 'Minecraft'}, {level: 50}]
+// });
+// db.games.find({platforms: 'Switch'});
+// db.games.find({'developer.country': 'Poland' });
+// games released before 2010 year
+// db.games.find({ release: { $lt: 2010 } });
+// games released before 2015 year, including 2015 year
+// db.games.find({ release: { $lte: 2015 } });
+// games released after 2020 year
+// db.games.find({ release: { $gt: 2020 } });
+// games released after 2020 year, including 2020 year
+// db.games.find({ release: { $gte: 2020 } });
+// combined search
+// db.games.find({ release: { $gt: 2015, $lt: 2020 } });
+
+// $eq
+
+// db.games.find({ release: 2015 });
+// db.games.find({ release: { $eq: 2015 } });
+
+// $ne
+
+// db.games.find({ release: { $ne: 2015 } });
+// db.gamers.find({ level: { $lte: 20 } });
+// db.gamers.find({ level: { $gt: 50 } });
+// db.gamers.find({ level: { $ne: 50 } });
+// db.gamers.find({ level: { $gte: 30, $lt: 50 } });
+
+// $in
+
+// db.games.find({ genre: { $in: ['open-world', 'metroidvania'] } });
+// db.games.find({ 'developer.country': { $in: ['Australia', 'USA'] } });
+// db.games.find({
+//     $and: [
+//         { genre: 'metroidvania' },
+//         { release: { $gt: 2015 } },
+//         { isChildren: true }
+//     ]
+// });

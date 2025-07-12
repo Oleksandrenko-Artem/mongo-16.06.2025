@@ -1,0 +1,134 @@
+use('mongo_1');
+
+// add collection in database
+// db.users.insertOne({ login: 'bred' });
+// delete collection in database
+// db.users.drop();
+// db.games.insertOne({
+//     title: 'Elden Ring 3',
+//     release: 2024,
+//     platforms: ['PC', 'PS'],
+//     isChildren: true,
+//     genre: 'souls',
+//     developer: {country: 'Japan', name: 'Company'}
+// });
+// db.games.insertMany([
+//     {
+//         title: 'Dark Souls III',
+//         release: 2016,
+//         platforms: ['PC', 'PS', 'Xbox'],
+//         isChildren: true,
+//         genre: 'souls',
+//         developer: { country: 'Japan', name: 'FromSoftware' }
+//     },
+//     {
+//         title: 'Bloodborne',
+//         release: 2015,
+//         platforms: ['PS'],
+//         isChildren: true,
+//         genre: 'souls',
+//         developer: { country: 'Japan', name: 'FromSoftware' }
+//     },
+//     {
+//         title: 'Sekiro: Shadows Die Twice',
+//         release: 2019,
+//         platforms: ['PC', 'PS', 'Xbox'],
+//         isChildren: true,
+//         genre: 'souls',
+//         developer: { country: 'Japan', name: 'FromSoftware' }
+//     },
+//     {
+//         title: 'Nioh 2',
+//         release: 2020,
+//         platforms: ['PC', 'PS'],
+//         isChildren: true,
+//         genre: 'souls',
+//         developer: { country: 'Japan', name: 'Team Ninja' }
+//     }
+// ]);
+// db.games.insertMany([
+//     {
+//         title: 'The Witcher 3: Wild Hunt',
+//         release: 2015,
+//         platforms: ['PC', 'PS', 'Xbox', 'Switch'],
+//         isChildren: false,
+//         genre: 'RPG',
+//         developer: { country: 'Poland', name: 'CD Projekt Red' }
+//     },
+//     {
+//         title: 'Cyberpunk 2077',
+//         release: 2020,
+//         platforms: ['PC', 'PS', 'Xbox'],
+//         isChildren: false,
+//         genre: 'RPG',
+//         developer: { country: 'Poland', name: 'CD Projekt Red' }
+//     },
+//     {
+//         title: 'Hollow Knight',
+//         release: 2017,
+//         platforms: ['PC', 'PS', 'Xbox', 'Switch'],
+//         isChildren: true,
+//         genre: 'metroidvania',
+//         developer: { country: 'Australia', name: 'Team Cherry' }
+//     },
+//     {
+//         title: 'Red Dead Redemption 2',
+//         release: 2018,
+//         platforms: ['PC', 'PS', 'Xbox'],
+//         isChildren: false,
+//         genre: 'open-world',
+//         developer: { country: 'USA', name: 'Rockstar Games' }
+//     },
+//     {
+//         title: 'Minecraft',
+//         release: 2011,
+//         platforms: ['PC', 'PS', 'Xbox', 'Switch', 'Mobile'],
+//         isChildren: true,
+//         genre: 'sandbox',
+//         developer: { country: 'Sweden', name: 'Mojang Studios' }
+//     }
+// ]);
+// db.gamers.insertMany([
+//     {
+//         login: 'Bob',
+//         favouriteGame: 'Minecraft',
+//         level: 23
+//     },
+//     {
+//         login: 'Alex',
+//         favouriteGame: 'Red Dead Redemption 2',
+//         level: 40
+//     },
+//     {
+//         login: 'Jack',
+//         favouriteGame: 'Hollow Knight',
+//         level: 50
+//     },
+//     {
+//         login: 'Mary',
+//         favouriteGame: 'Dark Souls III',
+//         level: 37
+//     },
+//     {
+//         login: 'John',
+//         favouriteGame: 'Bloodborne',
+//         level: 21
+//     }
+// ]);
+// db.gamers.insertMany([
+//     {
+//         login: 'Max',
+//         favouriteGame: 'Minecraft',
+//         level: 15
+//     },
+//     {
+//         login: 'Michael',
+//         favouriteGame: 'Dark Souls III',
+//         level: 96
+//     },
+//     {
+//         login: 'Jacob',
+//         favouriteGame: 'Red Dead Redemption 2',
+//         level: 20
+//     }
+// ]);

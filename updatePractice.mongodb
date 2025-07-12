@@ -1,0 +1,72 @@
+use('mongo_1');
+
+// db.movies.find();
+// db.movies.findOneAndUpdate(
+//     { title: 'Inception' },
+//     { $set: { ratingImdb: 9.1 } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Fight Club' },
+//     { $set: { 'director.age': 67 } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { genres: 'Fantasy' },
+//     { $set: { budget: 10 } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.updateMany(
+//     {},
+//     { $rename: { ratingImdb: 'IMDB' } }
+// );
+// db.movies.updateMany(
+//     { releaseYear: { $lt: 1995 } },
+//     { $set: { isRemake: false } }
+// );
+// db.movies.updateMany(
+//     { IMDB: { $gt: 9.1 } },
+//     { $unset: { isAdult: '' } }
+// );
+// db.movies.updateMany(
+//     {},
+//     { $inc: { IMDB: 0.1 } }
+// );
+// db.movies.updateMany(
+//     { budget: { $exists: true } },
+//     { $mul: { budget: 2 } }
+// );
+// db.movies.updateMany(
+//     { isAdult: { $exists: false } },
+//     { $inc: { releaseYear: -2 } }
+// );
+// db.movies.updateMany(
+//     { 'director.nationality': 'American' },
+//     { $inc: { 'director.age': -1 } }
+// );
+// db.movies.findOneAndUpdate(
+//     { 'mainActors.name': { $regex: '^Leo', $options: 'i' } },
+//     { $unset: { 'mainActors.2': '' } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.updateMany(
+//     { genres: { $size: 4 } },
+//     { $mul: { IMDB: 1.1 } }
+// );
+// db.movies.findOneAndUpdate(
+//     { 'genres.2': { $exists: false } },
+//     { $inc: { releaseYear: -1 } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.updateMany(
+//     { 'director.name': 'Quentin Tarantino' },
+//     { $min: { 'director.age': 64 } }
+// );
+// db.movies.updateMany(
+//     { genres: 'Crime', releaseYear: { $gt: 2000 } },
+//     { $inc: { IMDB: 0.2 } }
+// );
+// db.movies.updateMany(
+//     { 'mainActors.name': { $regex: 'ge$', $options: 'i' } },
+//     { $inc: { IMDB: -0.3 } }
+// );

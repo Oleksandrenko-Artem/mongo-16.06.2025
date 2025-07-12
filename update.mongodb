@@ -1,0 +1,125 @@
+use('mongo_1');
+
+// updateOne(filter, update, options)
+
+// db.games.updateOne(
+//     { title: 'Minecraft' },
+//     { $set: { genre: 'Sandbox' } }
+// );
+// db.games.updateOne(
+//     { title: 'Elden Ring' },
+//     { $set: { 'developer.name': 'Qwerty' } }
+// );
+// db.games.findOneAndUpdate(
+//     { title: 'Bloodborne' },
+//     { $set: { isChildren: true } },
+//     { returnDocument: 'after' }
+// );
+// db.games.updateMany(
+//     { release: 2015, genre: 'RPG' },
+//     { $set: { genre: 'RPG2' } }
+// );
+
+// replaceOne(filter, replace, options)
+
+// db.games.replaceOne(
+//     { title: 'The Witcher 3: Wild Hunt' },
+//     {
+//         title: 'Hunt',
+//         release: 2025,
+//         platforms: [
+//             "PC",
+//             "PS",
+//             "Xbox",
+//             "Switch"
+//         ],
+//         isChildren: false,
+//         genre: 'action',
+//         developer: {
+//             country: 'USA',
+//             name: 'Company QQQ'
+//         }
+//     }
+// );
+// db.games.find({ title: 'Hunt' });
+// db.games.findOneAndReplace(
+//     { title: 'Hunt' },
+//     {
+//         title: 'Hunt 25',
+//         release: 2025,
+//         genre: 'action'
+//     },
+//     { returnDocument: 'after' }
+// );
+// db.games.updateMany(
+//     { release: { $gt: 2018 } },
+//     { $set: { raiting: 1 } }
+// );
+// db.games.find({ release: { $gt: 2018 } });
+// db.games.updateMany(
+//     { release: { $lte: 2015 } },
+//     { $unset: { isChildren: "" } }
+// );
+// db.games.find({ release: { $lte: 2015 } });
+
+// rename
+
+// db.games.updateMany(
+//     {},
+//     { $rename: { 'release': 'releaseYear' } }
+// );
+// db.games.find();
+
+// $inc
+
+// db.games.updateMany(
+//     { raiting: { $exists: true }, 'developer.country': 'Poland' },
+//     { $inc: { raiting: 1 } }
+// );
+// db.games.updateMany(
+//     { raiting: { $exists: true }, 'developer.country': 'Japan' },
+//     { $inc: { raiting: 3 } }
+// );
+// db.games.find({ raiting: { $exists: true } });
+
+// $mul: {field: 2}
+
+// db.games.updateMany(
+//     { raiting: { $exists: true }, releaseYear: { $gt: 2020 } },
+//     { $mul: { raiting: 2 } }
+// );
+// db.games.findOneAndUpdate(
+//     { raiting: { $exists: true }, releaseYear: { $gt: 2020 } },
+//     { $mul: { raiting: 2 } },
+//     { returnDocument: 'after' }
+// );
+
+// $min, $max
+
+// db.games.findOneAndUpdate(
+//     { title: 'Minecraft' },
+//     { $min: { releaseYear: 2007 } },
+//     { returnDocument: 'after' }
+// );
+// db.games.findOneAndUpdate(
+//     { title: 'Minecraft' },
+//     { $max: { releaseYear: 2009 } },
+//     { returnDocument: 'after' }
+// );
+
+// db.games.updateMany(
+//     { platforms: 'Xbox' },
+//     { $inc: { releaseYear: 2 } }
+// );
+// db.games.find({ platforms: 'Xbox' });
+// db.games.updateMany(
+//     { releaseYear: 2019 },
+//     { $unset: { platforms: "" } }
+// );
+// db.games.find({ releaseYear: 2019 });
+// db.games.findOneAndUpdate(
+//     { title: { $regex: '^n', $options: 'i' } },
+//     { $set: { genre: 'fantastic' } },
+//     { returnDocument: 'after' }
+// );
+// db.games.find({ title: { $regex: 'n', $options: 'i' } });

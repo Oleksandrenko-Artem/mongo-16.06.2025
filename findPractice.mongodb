@@ -1,0 +1,34 @@
+use('mongo_1');
+
+// db.movies.find({ releaseYear: { $eq: 2014 } });
+// db.movies.find({ ratingImdb: { $lt: 6.5 } });
+// db.movies.find({ genres: { $eq: 'Drama' } });
+// db.movies.find({ 'director.age': { $gt: 50 } });
+// db.movies.find({ 'mainActors.name': { $regex: '^Chris', $options: 'i' } });
+// db.movies.find({
+//     $and: [{ releaseYear: { $gt: 2005 } }, { ratingImdb: { $gt: 7.5 } }]
+// });
+// db.movies.find({ genres: { $in: ['Drama', 'Animation'] } });
+// db.movies.find({
+//     $and: [{ genres: { $eq: 'Science Fiction' } }, { genres: { $ne: 'Action' } }]
+// });
+// db.movies.find({
+//     $and: [
+//         { 'director.name': { $in: ['Christopher Nolan', 'James Cameron'] } },
+//         { ratingImdb: { $gte: 8.0 } }
+//     ]
+// });
+// db.movies.find({ genres: { $nin: ['Documentary', 'Drama'] } });
+// db.movies.find({ genres: { $size: 2 } });
+// db.movies.find({ 'genres.3': { $exists: true } });
+// db.movies.find({ 'mainActors.0.name': 'Leonardo DiCaprio' });
+// db.movies.find({ 'mainActors.name': { $regex: '(son|man)$', $options: 'i' } });
+// db.movies.find({
+//     $and: [{ releaseYear: { $gt: 2000 } }, { genres: 'Crime' }, { 'director.name': { $ne: 'Christopher Nolan' } }]
+// });
+// db.movies.find({
+//     $and: [{ ratingImdb: { $gt: 8.0, $lt: 8.5 } }, { 'director.nationality': { $ne: 'American' } }, { genres: { $eq: 'Drama' } }]
+// });
+db.movies.find({
+    $and: [{ genres: { $eq: 'Crime' } }, { 'mainActors.name': { $ne: 'Leonardo DiCaprio' } }, { ratingImdb: { $gt: 8.0, $lt: 9.0 } }]
+});

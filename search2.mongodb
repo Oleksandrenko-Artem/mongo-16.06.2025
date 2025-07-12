@@ -1,0 +1,34 @@
+use('mongo_1');
+
+// $exists
+
+// find all games that haven't genre
+// db.games.find({ genre: { $exists: false } });
+// will find only those where there is 1 element in the array
+// db.games.find({ 'platforms.1': { $exists: false } });
+// 4 and more elements
+// db.games.find({ 'platforms.3': { $exists: true } });
+
+// $size
+
+// db.games.find({ platforms: { $size: 4 } });
+
+// $nin
+
+// find all games that haven't the listed values
+// db.games.find({ platforms: { $nin: ['Xbox', 'Mobile'] } });
+// db.games.find({ genre: { $nin: ['souls', 'metroidvania', 'open-world'] } });
+// db.movies.find({ 'mainActors.name': 'Leonardo DiCaprio' });
+// db.movies.find({ 'genres.1': { $exists: false } });
+// db.movies.find({ 'genres.2': { $exists: true } });
+// db.movies.find({ genres: { $nin: ['Science Fiction', 'Biography', 'Thriller'] } });
+// db.movies.find({ genres: { $all: ['Drama', 'Adventure'] } });
+// db.movies.find({
+//     'mainActors.name': { $all: ['Leonardo DiCaprio', 'Matt Damon'] }
+// });
+// db.movies.find({
+//     $and: [
+//         { 'director.age': { $gt: 70 } },
+//         { 'director.nationality': { $eq: 'American' } }
+//     ]
+// });

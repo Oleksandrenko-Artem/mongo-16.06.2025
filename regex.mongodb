@@ -1,0 +1,17 @@
+use('mongo_1');
+
+// $regex
+
+// шукає назву де є літера М не зважаючи на регістр
+// db.games.find({ title: { $regex: 'M', $options: 'i' } });
+// шукає назву де є літери Wi
+// db.games.find({ title: { $regex: 'Wi', $options: 'i' } });
+// шукає назву де починається з літери S
+// db.games.find({ title: { $regex: '^S' } });
+// шукає назву де закінчується на літеру e не зважаючи на регістр
+// db.games.find({ title: { $regex: 'e$', $options: 'i' } });
+// db.movies.find({ title: { $regex: '^In', $options: 'i' } });
+// db.movies.find({ 'mainActors.name': { $regex: '^Tom' } });
+// db.movies.find({ 'mainActors.name': { $regex: 'en$', $options: 'i' } });
+// db.movies.find({ 'director.nationality': { $regex: '^B[a-z]*h$', $options: 'i' } });
+// db.movies.find({ title: { $regex: '.+\\bThe\\b.+', $options: 'i' } });
