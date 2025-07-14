@@ -1,0 +1,57 @@
+use('mongo_1');
+
+// db.movies.find();
+
+// db.movies.findOneAndUpdate(
+//     { title: 'Interstellar' },
+//     { $pull: { genres: 'Drama' } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Inception' },
+//     { $push: { genres: 'Triller' } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Forrest Gump' },
+//     { $addToSet: { genres: { $each: ['Drama', 'Comedy'] } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Inception' },
+//     { $push: { mainActors: { name: 'Tom Hardy', role: 'Eames' } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Inception' },
+//     { $pull: { mainActors: { name: 'Joseph Gordon-Levitt' } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Inception' },
+//     { $pull: { genres: { $regex: '^S' } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.updateMany(
+//     { releaseYear: { $gte: 2000, $lte: 2010 } },
+//     { $pop: { mainActors: 1 } }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Interstellar' },
+//     { $push: { genres: { $each: ['Drama'], $position: 0 } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Interstellar' },
+//     { $push: { genres: { $each: ['Action'], $sort: 1 } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.findOneAndUpdate(
+//     { title: 'Interstellar' },
+//     { $pull: { genres: { $ne: 'Fantastic' } } },
+//     { returnDocument: 'after' }
+// );
+// db.movies.updateMany(
+//     {'director.nationality': 'American'},
+//     { $pop: { genres: -1 } }
+// );

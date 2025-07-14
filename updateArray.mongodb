@@ -1,0 +1,77 @@
+use('mongo_1');
+
+// db.games.find({});
+
+// $push - додає новий елемент в кінець масиву
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $push: { platforms: 'Mobile' } },
+//     { returnDocument: 'after' }
+// );
+
+// $pull - видаляє конкретний елемент з масиву
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $pull: { platforms: 'PS' } },
+//     { returnDocument: 'after' }
+// );
+
+// $addToSet - додає новий елемент в кінець масиву, тільки в тому випадку, якщо такого значення в масиві не має
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $addToSet: { platforms: 'PS' } },
+//     { returnDocument: 'after' }
+// );
+
+// $pop - видаляє лише один  елемент з масиву
+// +1 - видаляє останній
+// -1 - видаляє перший
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $pop: { platforms: 1 } },
+//     { returnDocument: 'after' }
+// );
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $pop: { platforms: -1 } },
+//     { returnDocument: 'after' }
+// );
+
+// $each - перебирає значення масиву
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $push: { platforms: { $each: ['PS', 'PC'] } } },
+//     { returnDocument: 'after' }
+// );
+
+// $ne разом з $pull - видаляє усі елементи окрім вказаного
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $pull: { platforms: { $ne: 'Mobile' } } },
+//     { returnDocument: 'after' }
+// );
+
+// db.games.findOneAndUpdate(
+//     { title: 'Dark Souls III' },
+//     { $addToSet: { platforms: { $each: ['PS', 'PC'] } } },
+//     { returnDocument: 'after' }
+// );
+
+// db.games.updateMany(
+//     {},
+//     { $pull: { platforms: 'PC' } }
+// );
+// db.games.updateMany(
+//     { releaseYear: { $gt: 2020 } },
+//     { $addToSet: { platforms: 'Switch' } }
+// );
+// db.games.updateMany(
+//     { genre: 'souls' },
+//     { $pull: { platforms: { $ne: 'Xbox' } } }
+// );
