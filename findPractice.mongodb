@@ -29,6 +29,6 @@ use('mongo_1');
 // db.movies.find({
 //     $and: [{ ratingImdb: { $gt: 8.0, $lt: 8.5 } }, { 'director.nationality': { $ne: 'American' } }, { genres: { $eq: 'Drama' } }]
 // });
-db.movies.find({
-    $and: [{ genres: { $eq: 'Crime' } }, { 'mainActors.name': { $ne: 'Leonardo DiCaprio' } }, { ratingImdb: { $gt: 8.0, $lt: 9.0 } }]
-});
+// db.movies.find({
+//     $and: [{ genres: { $eq: 'Crime' } }, { 'mainActors.name': { $ne: 'Leonardo DiCaprio' } }, { ratingImdb: { $gt: 8.0, $lt: 9.0 } }]
+// });

@@ -1,0 +1,25 @@
+use('mongo_1');
+
+// db.movies.find();
+// db.movies.findOneAndDelete({ title: { $regex: '^p', $options: 'i' } });
+
+// видаляє фільм у якого найбільший ratingImdb
+
+// db.movies.findOneAndDelete(
+//     {},
+//     { sort: { IMDB: -1 } }
+// );
+
+// db.movies.findOneAndDelete(
+//     {},
+//     { sort: { releaseYear: 1 } }
+// );
+// db.movies.findOneAndDelete(
+//     { genres: 'Drama' },
+//     { sort: { 'director.age': 1 } }
+// );
+// db.movies.deleteMany({ 'mainActors.3': { $exists: true } });
+// db.movies.deleteMany({
+//     $and: [{ genres: 'Action', genres: 'Fantastic' }, { IMDB: { $lt: 7 } }]
+// });
+// db.movies.deleteMany({ 'mainActors.1': { $exists: false } });

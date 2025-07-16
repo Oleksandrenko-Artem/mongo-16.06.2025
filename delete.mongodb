@@ -1,0 +1,57 @@
+use('mongo_1');
+
+// db.games.find();
+
+// deleteOne(filter)
+
+// db.games.deleteOne({ title: 'Minecraft' });
+
+// findOneAndDelete(filter, options)
+
+// db.games.findOneAndDelete({ title: "Elden Ring" });
+
+// db.games.findOneAndDelete(
+//     {},
+//     { sort: { releaseYear: 1 } }
+// );
+
+// 6872e5a81ca0db99d0164b2a
+
+// db.games.findOneAndDelete(
+//     {},
+//     { sort: { releaseYear: -1 } }
+// );
+
+// 6872e5d3b07ff61f7c05f146
+
+// db.games.findOneAndDelete(
+//     { 'developer.country': 'Japan' },
+//     { sort: { releaseYear: 1 } }
+// );
+
+// 6872e5a81ca0db99d0164b29
+
+// db.games.findOneAndDelete(
+//     { raiting: { $exists: true }, genre: 'RPG' },
+//     { sort: { raiting: -1 } }
+// );
+
+// deleteMany(filter)
+
+// db.games.deleteMany({
+//     $and: [
+//         { raiting: { $exists: true } },
+//         { releaseYear: { $gte: 2010, $lte: 2020 } }
+//     ]
+// });
+
+// наступна команда видаляє усі документи і залишає порожню колекцію
+// db.users.deleteMany({});
+
+// наступна команда видаляє усю колекцію разом із документами
+// db.users.drop();
+
+// db.games.deleteMany(
+//     { isChildren: true },
+//     { 'developer.country': { $ne: 'Australia' } }
+// );
