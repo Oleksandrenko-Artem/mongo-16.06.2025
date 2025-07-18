@@ -1,0 +1,52 @@
+use('mongo_1');
+
+// db.createCollection('students', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: [
+//                 "fullName",
+//                 "age",
+//                 "subjects",
+//                 "isOnline",
+//                 "modul"
+//             ],
+//             properties: {
+//                 fullName: {
+//                     bsonType: 'string',
+//                     pattern: '^[A-Z][a-z]+\s[A-Z][a-z]$',
+//                     minLength: 5,
+//                     maxLength: 128,
+//                     description: 'Must be string with length [5-128]'
+//                 },
+//                 age: {
+//                     bsonType: 'int',
+//                     minimum: 10,
+//                     maximum: 150,
+//                     description: 'Must be positive number 10-150'
+//                 },
+//                 subjects: {
+//                     bsonType: 'array',
+//                     items: {
+//                         bsonType: 'string'
+//                     },
+//                     minItems: 2,
+//                     description: 'Array length must be 2 and more'
+//                 },
+//                 isOnline: {
+//                     bsonType: 'bool',
+//                     description: 'Must be boolean'
+//                 },
+//                 modul: {
+//                     bsonType: 'string',
+//                     enum: [1, 2, 3, 4, 5, 6],
+//                     description: 'Modul must be 1, 2, 3, 4, 5, or 6'
+//                 },
+//                 createdAt: {
+//                     bsonType: 'date',
+//                     description: 'Data registration student'
+//                 }
+//             }
+//         }
+//     }
+// });

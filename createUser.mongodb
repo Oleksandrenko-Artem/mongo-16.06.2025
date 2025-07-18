@@ -1,0 +1,19 @@
+use('mongo_1');
+
+// db.users.find();
+
+// db.users.insertOne({
+//     firstName: 'Brad',
+//     lastName: 'Pitt',
+//     isMale: true,
+//     birthYear: 1963,
+//     address: {
+//         city: 'Losvegas',
+//         street: 'Avenu',
+//         houseNumber: 23
+//     },
+//     rating: 4.8,
+//     hobbies: ['movie'],
+//     status: 'busy',
+//     createdAt: new Date()
+// });

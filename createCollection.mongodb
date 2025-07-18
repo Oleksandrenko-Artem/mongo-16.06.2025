@@ -1,0 +1,93 @@
+use('mongo_1');
+
+// db.createCollection('users', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: [
+//                 "firstName",
+//                 "lastName",
+//                 "isMale",
+//                 "birthYear",
+//                 "address",
+//                 "rating",
+//                 "hobbies",
+//                 "status"
+//             ],
+//             properties: {
+//                 firstName: {
+//                     bsonType: 'string',
+//                     pattern: '^[A-Z][a-z]{1,31}$',
+//                     minLength: 2,
+//                     maxLength: 32,
+//                     description: 'Must be string with length [2-32]'
+//                 },
+//                 lastName: {
+//                     bsonType: 'string',
+//                     pattern: '^[A-Z][a-z]{2,31}$',
+//                     minLength: 3,
+//                     maxLength: 32,
+//                     description: 'Must be string with length [3-32]'
+//                 },
+//                 isMale: {
+//                     bsonType: 'bool',
+//                     description: 'Must be boolean'
+//                 },
+//                 birthYear: {
+//                     bsonType: 'int',
+//                     minimum: 1900,
+//                     maximum: new Date().getFullYear(),
+//                     description: 'Must be number 1900-2025'
+//                 },
+//                 address: {
+//                     bsonType: 'object',
+//                     required: ['city'],
+//                     properties: {
+//                         city: {
+//                             bsonType: 'string',
+//                             pattern: '^[A-Z][a-z]{2,31}$',
+//                             minLength: 3,
+//                             maxLength: 32,
+//                             description: 'Must be string with length [3-32]'
+//                         },
+//                         street: {
+//                             bsonType: 'string',
+//                             minLength: 3,
+//                             maxLength: 32,
+//                             description: 'Must be string with length [3-64]'
+//                         },
+//                         houseNumber: {
+//                             bsonType: 'int',
+//                             minimum: 1,
+//                             description: 'Must be positive number'
+//                         }
+//                     }
+//                 },
+//                 rating: {
+//                     bsonType: 'double',
+//                     minimum: 0,
+//                     maximum: 5,
+//                     description: 'Must be positive number [0-5]'
+//                 },
+//                 hobbies: {
+//                     bsonType: 'array',
+//                     items: {
+//                         bsonType: 'string'
+//                     },
+//                     minItems: 1,
+//                     maxItems: 5,
+//                     description: 'Array length must be 1-5'
+//                 },
+//                 status: {
+//                     bsonType: 'string',
+//                     enum: ['active', 'sleep', 'busy'],
+//                     description: 'Status must be active, sleep or busy'
+//                 },
+//                 createdAt: {
+//                     bsonType: 'date',
+//                     description: 'Data registration user'
+//                 }
+//             }
+//         }
+//     }
+// });
