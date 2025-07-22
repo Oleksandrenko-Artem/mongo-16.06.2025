@@ -1,0 +1,43 @@
+use('mongo_2');
+
+// db.createCollection('categories', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: ['title'],
+//             properties: {
+//                 title: {
+//                     bsonType: 'string',
+//                     pattern: '^[A-Z][a-z]{1,31}$',
+//                     minLength: 2,
+//                     maxLength: 32,
+//                     description: 'Must be string with length [2-32]',
+//                 },
+//             },
+//         },
+//     },
+// });
+// db.createCollection('products', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: ['title', 'price', 'categoryId'],
+//             properties: {
+//                 title: {
+//                     bsonType: 'string',
+//                     minLength: 5,
+//                     maxLength: 255,
+//                     description: 'Must be string with length [5-255]',
+//                 },
+//                 price: {
+//                     bsonType: 'int',
+//                     minimum: 1,
+//                     maximum: 1000000,
+//                 },
+//                 categoryId: {
+//                     bsonType: 'objectId',
+//                 },
+//             },
+//         },
+//     },
+// });

@@ -1,0 +1,9 @@
+"Laptops": {
+  "$oid": "68800f409935cd1ada04ca3e"
+},
+"Phones": {
+  "$oid": "68800f409935cd1ada04ca3f"
+},
+"Tablets": {
+  "$oid": "68800f409935cd1ada04ca40"
+}

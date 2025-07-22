@@ -1,0 +1,23 @@
+use('mongo_2');
+
+// db.categories.insertMany([
+//     { title: 'Laptops' },
+//     { title: 'Phones' },
+//     { title: 'Tablets' }
+// ]);
+// db.products.insertOne({
+//     title: 'Laptop ASUS 16x',
+//     price: 27777,
+//     categoryId: ObjectId("68800f409935cd1ada04ca3e"),
+// });
+// db.products.insertMany([
+//     { "title": "Phone Samsung S23", "price": 32999, categoryId: ObjectId("68800f409935cd1ada04ca3f"), },
+//     { "title": "Tablet iPad Air", "price": 25999, categoryId: ObjectId("68800f409935cd1ada04ca40"), },
+//     { "title": "Laptop HP ProBook", "price": 31500, categoryId: ObjectId("68800f409935cd1ada04ca3e"), },
+//     { "title": "Phone iPhone 15", "price": 42999, categoryId: ObjectId("68800f409935cd1ada04ca3f"), },
+//     { "title": "Tablet Samsung Tab S9", "price": 28500, categoryId: ObjectId("68800f409935cd1ada04ca40"), },
+//     { "title": "Laptop Dell XPS 15", "price": 49999, categoryId: ObjectId("68800f409935cd1ada04ca3e"), },
+//     { "title": "Phone Google Pixel 8", "price": 29999, categoryId: ObjectId("68800f409935cd1ada04ca3f"), },
+//     { "title": "Tablet Lenovo Tab P12", "price": 18999, categoryId: ObjectId("68800f409935cd1ada04ca40"), },
+//     { "title": "Laptop Acer Nitro 5", "price": 37999, categoryId: ObjectId("68800f409935cd1ada04ca3e"), }
+// ]);
