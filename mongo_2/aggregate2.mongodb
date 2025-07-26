@@ -1,0 +1,33 @@
+use('mongo_2');
+
+// db.products.aggregate([
+//     {
+//         $match: {
+//           price: {$gt: 30000}
+//         }
+//     },
+//     {
+//         $lookup: {
+//           from: 'categories',
+//           localField: 'categoryId',
+//           foreignField: '_id',
+//           as: 'category'
+//         }
+//     },
+//     {
+//         $unwind: '$category'
+//     },
+//     {
+//         $project: {
+//             _id: 0,
+//             title: 1,
+//             price: 1,
+//             categoryName: '$category.title'
+//         }
+//     },
+//     {
+//         $sort: {
+//           price: -1
+//         }
+//     }
+// ]);

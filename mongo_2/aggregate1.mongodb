@@ -1,0 +1,35 @@
+use('mongo_2');
+
+// db.products.aggregate([
+//     {
+//         $group: {
+//           _id: '$categoryId',
+//           totalProducts: {
+//             $sum: 1
+//           }
+//         }
+//     },
+//     {
+//         $lookup: {
+//           from: 'categories',
+//           localField: '_id',
+//           foreignField: '_id',
+//           as: 'category'
+//         }
+//     },
+//     {
+//         $unwind: '$category'
+//     },
+//     {
+//         $project: {
+//             _id: 0,
+//             titleCategory: '$category.title',
+//             totalProducts: 1
+//         }
+//     },
+//     {
+//         $sort: {
+//             totalProducts: 1
+//         }
+//     }
+// ]);

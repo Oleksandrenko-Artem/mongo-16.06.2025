@@ -3,35 +3,53 @@ use('mongo_2');
 // db.categories.find();
 // db.products.find();
 
+// db.products.updateMany(
+//     { categoryId: ObjectId('68800f409935cd1ada04ca3e') },
+//     { $mul: { price: 2 } }
+// );
+// db.products.updateMany(
+//     { categoryId: ObjectId('68800f409935cd1ada04ca3e') },
+//     { $inc: { price: -1500 } }
+// );
+// db.products
+//     .find({ categoryId: ObjectId("68800f409935cd1ada04ca3f") })
+//     .sort({ price: -1 })
+//     .limit(1);
+
+// db.products
+//     .find({ categoryId: ObjectId("68800f409935cd1ada04ca40") })
+//     .sort({ price: 1 })
+//     .limit(1);
+
 // aggregate
 
-db.products.aggregate([
-    {
-        $lookup: {
-          from: 'categories',
-          localField: 'categoryId',
-          foreignField: '_id',
-          as: 'category'
-        }
-    },
-    {
-        $unwind: '$category'
-    },
-    {
-        $project: {
-            _id: 1,
-            title: 1,
-            price: 1,
-            categoryName: '$category.title'
-        }
-    },
-    {
-        $sort: { price: 1 }
-    },
-    // {
-    //     $skip: 2
-    // },
-    {
-        $limit: 1
-    }
-]);
+// db.products.aggregate([
+//     {
+//         $lookup: {
+//           from: 'categories',
+//           localField: 'categoryId',
+//           foreignField: '_id',
+//           as: 'category'
+//         }
+//     },
+//     {
+//         $unwind: '$category'
+//     },
+//     {
+//         $project: {
+//             _id: 1,
+//             title: 1,
+//             price: 1,
+//             categoryName: '$category.title'
+//         }
+//     },
+//     {
+//         $sort: { price: 1 }
+//     },
+//     {
+//         $skip: 2
+//     },
+//     {
+//         $limit: 1
+//     }
+// ]);
