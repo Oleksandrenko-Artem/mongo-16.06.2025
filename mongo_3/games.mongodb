@@ -1,0 +1,47 @@
+use('mongo_3');
+
+// db.createCollection('games', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: ['title', 'genre', 'releaseYear', 'developerId'],
+//             properties: {
+//                 title: {
+//                     bsonType: 'string',
+//                     minLength: 3,
+//                     maxLength: 255,
+//                     description: 'Назва повинна бути унікальною і містити від 3 до 255 символів',
+//                 },
+//                 genre: {
+//                     bsonType: 'string',
+//                     enum: ['RPG', 'open-world', 'sandbox', 'metroidvania'],
+//                     description: 'Жанр гри повинен бути: RPG, open-world, sandbox, metroidvania',
+//                 },
+//                 releaseYear: {
+//                     bsonType: 'int',
+//                     minimum: 1950,
+//                     maximum: new Date().getFullYear(),
+//                     description: 'Рік гри повинен бути більше 1950 і не більше поточного року',
+//                 },
+//                 developerId: {
+//                     bsonType: 'objectId',
+//                     description: 'Посилання на розробника',
+//                 },
+//             },
+//         },
+//     },
+// });
+
+// db.games.createIndex({ title: 1 }, { unique: true });
+
+// db.games.insertMany([
+//     { title: 'Red Dead Redemption 2', genre: 'open-world', releaseYear: 2020, developerId: ObjectId('68921b0c40818223eedd6f4f') },
+//     { title: 'Grand Theft Auto', genre: 'open-world', releaseYear: 1997, developerId: ObjectId('68921b0c40818223eedd6f4f') },
+//     { title: 'Grand Theft Auto V', genre: 'open-world', releaseYear: 2013, developerId: ObjectId('68921b0c40818223eedd6f4f') },
+//     { title: 'Pokemon Red & Blue', genre: 'RPG', releaseYear: 1996, developerId: ObjectId('68921d28fd551819c78e6ffc') },
+//     { title: 'Pokemon Black & White', genre: 'RPG', releaseYear: 2010, developerId: ObjectId('68921d28fd551819c78e6ffc') },
+//     { title: 'Pokemon Scarlet & Violet', genre: 'RPG', releaseYear: 2022, developerId: ObjectId('68921d28fd551819c78e6ffc') },
+//     { title: 'Castlevania Symphony of the Night', genre: 'metroidvania', releaseYear: 1997, developerId: ObjectId('68921d28fd551819c78e6ffc') },
+//     { title: 'Total War: Shogun', genre: 'sandbox', releaseYear: 2000, developerId: ObjectId('68921d28fd551819c78e6ffe') },
+//     { title: 'Xtreme Football', genre: 'sandbox', releaseYear: 2020, developerId: ObjectId('68921d28fd551819c78e6fff') },
+// ]);

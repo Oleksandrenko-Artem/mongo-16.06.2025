@@ -1,0 +1,52 @@
+use('mongo_3');
+
+// db.createCollection('users', {
+//     validator: {
+//         $jsonSchema: {
+//             bsonType: 'object',
+//             required: ['login', 'bdYear', 'isMale', 'favoriteGames'],
+//             properties: {
+//                 login: {
+//                     bsonType: 'string',
+//                     pattern: '^[a-zA-Z0-9]{3,64}$',
+//                     description: 'Логін повинен містити маленькі літери, великі літери, цифри, не може містити пробіли та інші символи, повинен мати не менше 3 і не більше 64 символів'
+//                 },
+//                 bdYear: {
+//                     bsonType: 'int',
+//                     minimum: 1925,
+//                     maximum: (new Date().getFullYear() - 12),
+//                     description: 'Рік народження повинен бути більшим за 1925, бути не більше поточного року і юзеру повинно бути не менше 12 років'
+//                 },
+//                 isMale: {
+//                     bsonType: 'bool',
+//                     description: 'Значення повинно містити true або false',
+//                 },
+//                 favoriteGames: {
+//                     bsonType: 'array',
+//                     minItems: 1,
+//                     items: {
+//                         bsonType: 'objectId',
+//                     },
+//                     description: 'Посилання на улюблену гру',
+//                 },
+//             },
+//         },
+//     },
+// });
+
+// db.users.createIndex({ login: 1 }, { unique: true });
+
+// db.users.insertMany([
+//     {login: 'Max07', bdYear: 2007, isMale: true, favoriteGames: [
+//         ObjectId('68926d30c982b94a7a69e255'),
+//         ObjectId('68926d30c982b94a7a69e25a'),
+//         ObjectId('68926d30c982b94a7a69e258'),
+//         ObjectId('68926d30c982b94a7a69e257')
+//     ]},
+//     {login: 'Maria88', bdYear: 1988, isMale: false, favoriteGames: [
+//         ObjectId('68926d30c982b94a7a69e254'),
+//         ObjectId('68926d30c982b94a7a69e257'),
+//         ObjectId('68926d30c982b94a7a69e25b'),
+//         ObjectId('68926d30c982b94a7a69e256'),
+//     ]},
+// ]);

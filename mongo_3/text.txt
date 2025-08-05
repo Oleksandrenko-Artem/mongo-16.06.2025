@@ -1,0 +1,44 @@
+[
+  {
+    "_id": {
+      "$oid": "68921b0c40818223eedd6f4f"
+    },
+    "title": "Rockstar Games",
+    "country": "USA"
+  },
+  {
+    "_id": {
+      "$oid": "68921d28fd551819c78e6ffb"
+    },
+    "title": "CD Projekt Red",
+    "country": "Poland"
+  },
+  {
+    "_id": {
+      "$oid": "68921d28fd551819c78e6ffc"
+    },
+    "title": "Nintendo",
+    "country": "Japan"
+  },
+  {
+    "_id": {
+      "$oid": "68921d28fd551819c78e6ffd"
+    },
+    "title": "Konami",
+    "country": "Japan"
+  },
+  {
+    "_id": {
+      "$oid": "68921d28fd551819c78e6ffe"
+    },
+    "title": "SEGA",
+    "country": "Japan"
+  },
+  {
+    "_id": {
+      "$oid": "68921d28fd551819c78e6fff"
+    },
+    "title": "Vostok Games",
+    "country": "Ukraine"
+  }
+]
