@@ -1,0 +1,132 @@
+use('mongo_3');
+
+// db.games.countDocuments();
+
+// distinct - повертає масив унікальних значень
+// db.games.distinct('genre');
+
+// db.developers.find({country: 'Japan'});
+
+// db.developers.aggregate([
+//     {
+//         $match: {
+//             country: 'Japan',
+//         },
+//     },
+// ]);
+
+// db.games.aggregate([
+//     {
+//         $match: {
+//             releaseYear: {$gt: 2013},
+//         },
+//     },
+// ]);
+
+// db.users.countDocuments();
+// db.developers.distinct('country');
+
+// const developer = db.developers.findOne({ title: 'Nintendo' });
+// db.games.find({ developerId: developer._id });
+
+// db.users.find({ 'favoriteGames.3': { $exists: true } });
+
+// db.games.find().sort({ releaseYear: 1 }).limit(1);
+// db.users.find().sort({ bdYear: -1 }).limit(2);
+
+// db.games.aggregate([
+//     {
+//         $group: {
+//             _id: '$genre',
+//             countGames: { $sum: 1 },
+//         },
+//     },
+// ]);
+// db.developers.aggregate([
+//     {
+//         $group: {
+//             _id: '$country',
+//             countDevelopers: {$sum: 1},
+//         },
+//     },
+// ]);
+// db.games.aggregate([
+//     {
+//         $group: {
+//             _id: '$genre',
+//             avgYear: { $avg: '$releaseYear' },
+//         },
+//     },
+// ]);
+// db.users.aggregate([
+//     {
+//         $group: {
+//             _id: null,
+//             avgYear: { $avg: '$bdYear' },
+//         },
+//     },
+// ]);
+// db.users.aggregate([
+//     {
+//         $group: {
+//             _id: '$isMale',
+//             avgYear: { $avg: '$bdYear' },
+//         },
+//     },
+// ]);
+// db.users.aggregate([
+//     {
+//         $group: {
+//             _id: '$isMale',
+//             countUsers: { $sum: 1 },
+//         },
+//     },
+// ]);
+
+// db.users.aggregate([
+//     {
+//         $lookup: {
+//           from: 'games',
+//           localField: 'favoriteGames',
+//           foreignField: '_id',
+//           as: 'favorGames',
+//         },
+//     },
+//     {
+//         $match: {
+//             'favorGames.genre': 'RPG',
+//         },
+//     },
+//     {
+//         $project: {
+//             _id: 0,
+//             login: 1,
+//             games: { title: '$favorGames.title', genre: '$favorGames.genre' },
+//         },
+//     },
+// ]);
+// db.games.aggregate([
+//     {
+//         $lookup: {
+//           from: 'developers',
+//           localField: 'developerId',
+//           foreignField: '_id',
+//           as: 'developer',
+//         },
+//     },
+//     {
+//         $unwind: '$developer',
+//     },
+//     {
+//         $match: {
+//             'developer.country': {$in: ['USA', 'Ukraine']},
+//         },
+//     },
+//     {
+//         $project: {
+//             _id: 0,
+//             title: 1,
+//             countryDeveloper: '$developer.country',
+//         },
+//     },
+// ]);
